@@ -8,28 +8,28 @@
     android:gravity="center"
     android:background="@color/colorPrimaryDark"
     android:padding="10dp"
-    tools:context=".foodwindow">
+    tools:context=".register">
 
 
     <EditText
 
         android:background="@drawable/capt"
-        android:id="@+id/Iname"
+        android:id="@+id/name"
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="item_name"
+        android:hint="Enter name"
         android:paddingLeft="20dp"
 
         />
 
     <EditText
         android:background="@drawable/capt"
-        android:id="@+id/noofitems"
+        android:id="@+id/email"
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Item numbers"
+        android:hint="email"
         android:paddingLeft="20dp"
         android:inputType="textEmailAddress"
 
@@ -38,11 +38,11 @@
 
     <EditText
         android:background="@drawable/capt"
-        android:id="@+id/message"
+        android:id="@+id/password"
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="type your message"
+        android:hint="password"
         android:paddingLeft="20dp"
         android:inputType="textPassword"
 
@@ -55,7 +55,7 @@
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Current Phone number"
+        android:hint="Phone number"
         android:paddingLeft="20dp"
         android:inputType="phone"
         />
@@ -68,7 +68,7 @@
         android:layout_marginBottom="20dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Current location"
+        android:hint="address"
         android:paddingLeft="20dp"
         android:inputType="text"
 
@@ -78,8 +78,8 @@
         android:background="@drawable/capt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order"
-        android:id="@+id/order"
+        android:text="Register"
+        android:id="@+id/register"
         android:backgroundTint="@color/cardview_shadow_end_color"
         />
 
