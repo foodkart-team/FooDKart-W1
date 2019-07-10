@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     android:padding="10dp"
     tools:context=".register">
 
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/register"
-        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:backgroundTint="@color/cardview_dark_background"
         />
 
 

@@ -1,8 +1,8 @@
 package com.example.foodkart;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +23,7 @@ public class frontactivity extends AppCompatActivity {
    private EditText eml,pass;
    private Button log,reg;
    RequestQueue requestQueue;
+
 
 
     @Override
@@ -49,6 +50,7 @@ public class frontactivity extends AppCompatActivity {
        log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 login();
             }
         });
@@ -58,7 +60,7 @@ public class frontactivity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-                if (response.contains("1")){
+                if (response.contains("2")){
                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                 }
@@ -66,7 +68,7 @@ public class frontactivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(),restaurantswindow.class));
                 }
 
-                else if(response.contains("2")){
+                else if(response.contains("1")){
                     startActivity(new Intent(getApplicationContext(),Admin.class));
                 }
 

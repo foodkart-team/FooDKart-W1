@@ -1,87 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foodwindow"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/colorPrimaryDark"
-    android:padding="10dp"
-    tools:context=".foodwindow">
+    android:orientation="vertical">
 
+<ListView
 
-    <EditText
-
-        android:background="@drawable/capt"
-        android:id="@+id/Iname"
-        android:layout_marginBottom="20dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="item_name"
-        android:paddingLeft="20dp"
-
-        />
-
-    <EditText
-        android:background="@drawable/capt"
-        android:id="@+id/noofitems"
-        android:layout_marginBottom="20dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Item numbers"
-        android:paddingLeft="20dp"
-        android:inputType="textEmailAddress"
-
-        />
-
-
-    <EditText
-        android:background="@drawable/capt"
-        android:id="@+id/message"
-        android:layout_marginBottom="20dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="type your message"
-        android:paddingLeft="20dp"
-        android:inputType="textPassword"
-
-        />
-
-
-    <EditText
-        android:background="@drawable/capt"
-        android:id="@+id/phone"
-        android:layout_marginBottom="20dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Current Phone number"
-        android:paddingLeft="20dp"
-        android:inputType="phone"
-        />
-
-
-
-    <EditText
-        android:background="@drawable/capt"
-        android:id="@+id/address"
-        android:layout_marginBottom="20dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Current location"
-        android:paddingLeft="20dp"
-        android:inputType="text"
-
-        />
-
-    <Button
-        android:background="@drawable/capt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order"
-        android:id="@+id/order"
-        android:backgroundTint="@color/cardview_shadow_end_color"
-        />
-
-
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:id="@+id/listView">
+</ListView>
 </LinearLayout>
+

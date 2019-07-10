@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".orderactivity"></activity>
+        <activity android:name=".fooditems"></activity>
+        <activity android:name=".orderactivity" />
         <activity android:name=".Admin" />
         <activity
             android:name=".frontactivity"
@@ -24,8 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".register" />
-        <activity android:name=".notifications" />
+        <activity
+            android:name=".register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".notifications"
+             />
         <activity android:name=".profile" />
         <activity android:name=".logout" />
         <activity android:name=".aboutus" />

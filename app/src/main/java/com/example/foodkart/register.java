@@ -1,9 +1,8 @@
 
 package com.example.foodkart;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +46,7 @@ public class register extends AppCompatActivity {
     }
 
     public void register(){
-        StringRequest request = new StringRequest(Request.Method.POST,"http://192.168.1.3/foodkart/customerregister.php",new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST,"http://172.17.0.236/foodkart/customerregister.php",new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
