@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/reslist"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginTop="5dp"
+    android:padding="8dp"
+    android:background="#fff"
+    >
+    <ImageView
+
+        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:background="@drawable/loading_shape"
+        android:id="@+id/respic"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/res_name"
+            android:text="Aneme Title"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Category"
+        android:textSize="15sp"
+    android:id="@+id/about2"
+    />
+    </LinearLayout>
+
+
+</LinearLayout>
