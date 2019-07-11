@@ -8,6 +8,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 }
 function createstudent()
+
 {
     global $connect;
 
@@ -23,27 +24,44 @@ function createstudent()
 		echo "1";
 	}
 	else{
-       $value = "select * from customer where Customer_email = '$Customer_email'";
-       $query2 = mysqli_query($connect,$value);
-       if(mysqli_num_rows($query2) > 0){
 
-       echo"2";
+		if(!filter_var($Customer_email,FILTER_VALIDATE_EMAIL) && !is_numeric($Phone_number))
+		 {
+		 		echo"notvalidep";
+		}
+		else{	
+			if(!filter_var($Customer_email,FILTER_VALIDATE_EMAIL))
+			{
+				 echo"notvalide";
+			}
+			else{
 
-       }
-       else{
-              
-              if(mysqli_query($connect,$query)){
+				if(!is_numeric($Phone_number))
+				{
+					echo"notvalidp";
+				}
+				else{
 
-              	echo"3";
+      					 $value = "select * from customer where Customer_email = '$Customer_email'";
+      			 		 $query2 = mysqli_query($connect,$value);
+       							if(mysqli_num_rows($query2) > 0)
+       							{
+									echo"2";
+								 }
+      							 else{
+              							 if(mysqli_query($connect,$query))
+             							 	{
 
-              }
+              									echo"3";
+              								}
 
-              else{
+            				 			 	else
+            								  {
+												echo"4";
+             				   					}
+      					 			}
+			}	}	}
 
-              	echo"4";
-              }
-       }
-	}
 
-
+		}
 }
