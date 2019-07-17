@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    android:padding="10dp"
+    tools:context=".admin_add_restaurant">
+
+
+    <EditText
+
+
+        android:id="@+id/r_name"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="restaurant name"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/colorAccent"
+
+
+
+        />
+
+    <EditText
+
+        android:id="@+id/r_address"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="restaurant address"
+        android:paddingLeft="20dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/colorAccent"
+
+
+        />
+
+
+
+
+    <EditText
+
+        android:id="@+id/r_phone"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="phone number"
+        android:paddingLeft="20dp"
+        android:inputType="phone"
+        android:textColorHint="@color/colorAccent"
+
+        />
+
+
+
+    <EditText
+
+        android:id="@+id/r_email"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="restaurant email"
+        android:paddingLeft="20dp"
+        android:inputType="text"
+        android:textColorHint="@color/colorAccent"
+
+
+        />
+
+    <EditText
+
+        android:id="@+id/r_password"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="restaurant password"
+        android:paddingLeft="20dp"
+        android:inputType="text"
+
+        android:textColorHint="@color/colorAccent"
+
+        />
+
+    <Button
+
+        android:background="@drawable/capt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:id="@+id/adds"
+        android:backgroundTint="@color/cardview_dark_background"
+        />
+
+
+</LinearLayout>

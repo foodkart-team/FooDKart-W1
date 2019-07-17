@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    android:padding="10dp"
+    tools:context=".foodaddbyres">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/addfoodtext"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="food name"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        />
+
+    <EditText
+
+        android:id="@+id/fprice"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:paddingLeft="20dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+
+        />
+    <Button
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/capt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD FOOD"
+        android:id="@+id/addfood"
+        android:backgroundTint="#320D0B"
+
+        />
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:layout_marginTop="70dp">
+
+
+    <EditText
+
+        android:id="@+id/removefoodtext"
+        android:layout_marginBottom="20dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="food name"
+        android:paddingLeft="20dp"
+        android:inputType="text"
+        android:textColor="@color/colorAccent"
+
+        android:textColorHint="@color/colorAccent"
+
+        />
+
+    <Button
+
+        android:background="@drawable/capt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REMOVE FOOD"
+        android:id="@+id/removefood"
+        android:textColor="@color/colorAccent"
+        android:backgroundTint="#320D0B"
+
+
+        />
+    <Button
+        android:textColor="@color/colorAccent"
+
+        android:background="@drawable/capt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food List"
+        android:id="@+id/seelistoffood"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#320D0B"
+
+
+        />
+
+</LinearLayout>
+
+
+</LinearLayout>
