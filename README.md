@@ -6,3 +6,10 @@ registration of Ordering  food.
 
 Order Insert and Select.
 Create restaurant list and food list.
+
+
+Restaurantadmin login system and manage fooditems with receiving orders.(CRD)
+Admin login system.
+orderlist(Read read and delete)
+
+
