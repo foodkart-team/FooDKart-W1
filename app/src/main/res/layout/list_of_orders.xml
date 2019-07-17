@@ -2,61 +2,162 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/orlist"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:padding="8dp"
-    android:background="#fff"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:layout_margin="8dp">
 
 
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <TextView
         android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listfitem"
-            android:text="food name"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
-
-        <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="phone number"
-        android:textSize="15sp"
-        android:id="@+id/listpnumber"
+        android:id="@+id/ordernum"
+        android:text="order num"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:text="."
+        android:paddingRight="10dp"
+        android:layout_gravity="center"
+
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listfitem"
+        android:text="food name"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone number:"
+        android:padding="2dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+
+        android:textColor="#fff"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone number"
+        android:inputType="number"
+        android:padding="2dp"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:id="@+id/listpnumber"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:padding="2dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+
+            android:textColor="#fff"
+            android:textSize="15sp"
+            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="address recent"
+        android:textColor="#fff"
+        android:padding="2dp"
         android:textSize="15sp"
         android:id="@+id/listaddress"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No of item:"
+        android:padding="2dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+
+        android:textColor="#fff"
+        android:textSize="15sp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No"
+        android:padding="2dp"
         android:textSize="15sp"
+        android:textColor="#fff"
         android:id="@+id/listnoitem"
+        />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:padding="2dp"
+        android:paddingRight="10dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="15sp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="message  of order"
         android:textSize="15sp"
+        android:padding="2dp"
+        android:textColor="#fff"
         android:id="@+id/listmessage"
         />
-    <TextView
+</LinearLayout>
+
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="time"
+        android:padding="2dp"
         android:textStyle="bold"
+        android:textColor="#FF0000"
         android:textSize="15sp"
         android:id="@+id/ordertime"
         />
-
-
 
 </LinearLayout>

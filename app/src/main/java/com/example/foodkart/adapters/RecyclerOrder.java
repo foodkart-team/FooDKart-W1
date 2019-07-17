@@ -34,21 +34,22 @@ public class RecyclerOrder extends RecyclerView.Adapter<RecyclerOrder.MyViewHold
         View view;
         LayoutInflater inflater = LayoutInflater.from(mContext);
         view = inflater.inflate(R.layout.list_of_orders,viewGroup,false);
-        MyViewHolder viewHolder = new MyViewHolder(view);
 
-        return viewHolder;
+
+        return new MyViewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, final int i) {
 
         myViewHolder.item_name.setText(mData.get(i).getItem_name());
         myViewHolder.no_of_items.setText(mData.get(i).getNo_of_items());
         myViewHolder.order_message.setText(mData.get(i).getOrder_message());
-        myViewHolder.Current_phn_num.setText(mData.get(i).getCurrent_phn_num());
+        myViewHolder.Current_phn_num.setText(Long.toString(mData.get(i).getCurrent_phn_num()));
         myViewHolder.Current_Location.setText(mData.get(i).getCurrent_Location());
         myViewHolder.order_time.setText(mData.get(i).getOrder_time());
+        myViewHolder.Order_number.setText(mData.get(i).getOrder_number());
 
     }
 
@@ -65,6 +66,7 @@ public class RecyclerOrder extends RecyclerView.Adapter<RecyclerOrder.MyViewHold
         TextView Current_phn_num;
         TextView Current_Location;
         TextView order_time;
+        TextView Order_number;
 
 
 
@@ -75,7 +77,9 @@ public class RecyclerOrder extends RecyclerView.Adapter<RecyclerOrder.MyViewHold
             no_of_items= itemView.findViewById(R.id.listnoitem);
             order_message = itemView.findViewById(R.id.listmessage);
             Current_phn_num=itemView.findViewById(R.id.listpnumber);
+            Order_number=itemView.findViewById(R.id.ordernum);
             order_time=itemView.findViewById(R.id.ordertime);
+
             Current_Location=itemView.findViewById(R.id.listaddress);
 
         }

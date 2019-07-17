@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class restaurantswindow extends AppCompatActivity {
-private String Json_URL = "http://192.168.1.3/foodkart/addres.php";
+private String Json_URL = "http://192.168.1.7/foodkart/addres.php";
 private RequestQueue requestQueue;
 private List<Anime> lstAnime;
 private RecyclerView recyclerView;

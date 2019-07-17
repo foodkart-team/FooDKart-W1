@@ -3,10 +3,12 @@
     android:orientation="horizontal"
     android:id="@+id/foodlist"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="95dp"
     android:layout_marginTop="20dp"
     android:padding="8dp"
-    android:background="#fff"
+
+    android:background="#17202A"
+
     >
     <ImageView
 
@@ -27,13 +29,17 @@
             android:id="@+id/foodname"
             android:text="food Title"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="29sp"
+            android:textColor="#fff"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="price"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:id="@+id/price"
+            android:textColor="#F1C40F"
+
             />
     </LinearLayout>
 

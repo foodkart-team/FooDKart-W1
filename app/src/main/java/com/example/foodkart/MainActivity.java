@@ -1,24 +1,19 @@
 package com.example.foodkart;
 
-import android.content.Intent;  //message passed between components
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.foodkart.R;
-import com.example.foodkart.drinkswindow;
-import com.example.foodkart.foodwindow;
-import com.example.foodkart.restaurantswindow;
-
     public class MainActivity extends AppCompatActivity
     {
-        private Button button,button3,button4;
+        private Button button,button4;
 
         @Override
         protected void onCreate(Bundle savedInstanceState)
@@ -31,7 +26,7 @@ import com.example.foodkart.restaurantswindow;
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         button=(Button) findViewById(R.id.button);
-        button3=(Button) findViewById(R.id.button3);
+
         button4=(Button) findViewById(R.id.button4);
 
 
@@ -44,14 +39,7 @@ import com.example.foodkart.restaurantswindow;
 
             }
         });
-        button3.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                Openactivity1();
-            }
-        });
+
         button4.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -63,15 +51,11 @@ import com.example.foodkart.restaurantswindow;
     }
 
     public void Openactivity(){
-        Intent intent = new Intent(this, foodwindow.class);
+        Intent intent = new Intent(this, fooditems.class);
         startActivity(intent);
 
     }
-    public void Openactivity1(){
-        Intent intent;
-        intent = new Intent (this, drinkswindow.class);
-        startActivity(intent);
-    }
+
     public void Openactivity2(){
         Intent intent= new Intent (this, restaurantswindow.class);
         startActivity(intent);
@@ -102,7 +86,7 @@ import com.example.foodkart.restaurantswindow;
             //noinspection SimplifiableIfStatement
             if (id == R.id.logout) {
 
-                Intent myintent = new Intent(this,logout.class);
+                Intent myintent = new Intent(this,frontactivity.class);
                 startActivity(myintent);
                 return false;
             }

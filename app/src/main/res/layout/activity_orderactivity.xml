@@ -21,6 +21,7 @@
         android:hint="item_name"
         android:paddingLeft="20dp"
         android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
 
 
 
@@ -36,6 +37,8 @@
         android:paddingLeft="20dp"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+
 
 
         />
@@ -51,9 +54,9 @@
         android:layout_height="wrap_content"
         android:hint="Current Phone number"
         android:paddingLeft="20dp"
-        android:inputType="phone"
+        android:inputType="number"
         android:textColorHint="@color/colorAccent"
-
+        android:textColor="@color/colorAccent"
         />
 
 
@@ -68,7 +71,7 @@
         android:paddingLeft="20dp"
         android:inputType="text"
         android:textColorHint="@color/colorAccent"
-
+        android:textColor="@color/colorAccent"
 
         />
 
@@ -81,6 +84,8 @@
         android:hint="type your message"
         android:paddingLeft="20dp"
         android:inputType="text"
+        android:textColor="@color/colorAccent"
+
 
         android:textColorHint="@color/colorAccent"
 

@@ -1,5 +1,6 @@
 package com.example.foodkart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -35,6 +36,7 @@ public class orderactivity extends AppCompatActivity {
         location = (EditText)findViewById(R.id.address);
         message = (EditText) findViewById(R.id.message);
         order = (Button) findViewById(R.id.order);
+
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,16 +48,28 @@ public class orderactivity extends AppCompatActivity {
 
     public void Order(){
 
-        StringRequest request = new StringRequest(Request.Method.POST,"http://192.168.1.3/foodkart/ordering.php",new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST,"http://192.168.1.7/foodkart/ordering.php",new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
                 if (response.contains("1")){
                     Toast.makeText(getApplicationContext(),"Please fill all the blocks",Toast.LENGTH_SHORT).show();
-
                 }
-                else if(response.contains("okay")){
-                    Toast.makeText(getApplicationContext(),"Your order received successfully",Toast.LENGTH_SHORT).show();
+                else if(response.contains("2")){
+                    Toast.makeText(getApplicationContext(),"Sorry, this item isn't avialable",Toast.LENGTH_SHORT).show();
+                }
+                else if(response.contains("3")){
+                    Toast.makeText(getApplicationContext(),"Enter Valuable number of items,should be less than 20!",Toast.LENGTH_SHORT).show();
+                }
+                else if(response.contains("4")){
+                    Toast.makeText(getApplicationContext(),"Please Enter valid Phone number",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(),orderactivity.class);
+                    startActivity(intent);
+                }
+                else if(response.contains("5")){
+                    Toast.makeText(getApplicationContext(),"Your order received successfully,You can see Here",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(),notifications.class);
+                    startActivity(intent);
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Servererror",Toast.LENGTH_SHORT).show();

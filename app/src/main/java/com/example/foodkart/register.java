@@ -1,6 +1,6 @@
-
 package com.example.foodkart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -46,7 +46,7 @@ public class register extends AppCompatActivity {
     }
 
     public void register(){
-        StringRequest request = new StringRequest(Request.Method.POST,"http://172.17.0.236/foodkart/customerregister.php",new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST,"http://192.168.1.7/foodkart/customerregister.php",new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -54,10 +54,19 @@ public class register extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Fill all the Fields",Toast.LENGTH_SHORT).show();
                 }
                 else if(response.contains("2")){
-                Toast.makeText(getApplicationContext(),"This email is already registered",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Already registered",Toast.LENGTH_SHORT).show();
+                }
+                else if(response.contains("4")) {
+                    Toast.makeText(getApplicationContext(),"please Enter valid email",Toast.LENGTH_SHORT).show();
+
+                }
+                else if(response.contains("5")) {
+                    Toast.makeText(getApplicationContext(),"Please enter valid Phone number",Toast.LENGTH_SHORT).show();
                 }
                 else if(response.contains("3")){
-                    Toast.makeText(getApplicationContext(),"Successfully registered",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successfully registered,Here to Login",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(),frontactivity.class);
+                    startActivity(intent);
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Please check the server connection",Toast.LENGTH_SHORT).show();
@@ -90,24 +99,3 @@ public class register extends AppCompatActivity {
         requestQueue.add(request);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

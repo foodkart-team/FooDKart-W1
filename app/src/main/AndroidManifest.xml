@@ -12,7 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fooditems"></activity>
+        <activity android:name=".foodaddbyres"
+            ></activity>
+        <activity android:name=".admin_add_restaurant"
+            />
+        <activity android:name=".restaurantadmin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".fooditems"
+            />
+        <activity android:name=".fooditems2"
+            />
         <activity android:name=".orderactivity" />
         <activity android:name=".Admin" />
         <activity
@@ -28,14 +37,14 @@
         <activity
             android:name=".register"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".notifications"
-             />
-        <activity android:name=".profile" />
+        <activity android:name=".notifications"
+            />
+        <activity android:name=".profile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".logout" />
         <activity android:name=".aboutus" />
-        <activity android:name=".restaurantswindow" />
-        <activity android:name=".drinkswindow" />
+        <activity android:name=".restaurantswindow"
+            />
         <activity android:name=".foodwindow" />
         <activity android:name=".MainActivity" />
     </application>

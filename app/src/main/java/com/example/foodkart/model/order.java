@@ -4,22 +4,29 @@ public class order {
     String item_name;
     String no_of_items;
     String order_message;
-    String Current_phn_num;
+    long  Current_phn_num;
     String Current_Location;
     String Order_time;
-
+    String Order_number;
     public order() {
     }
-
-    public order(String item_name, String no_of_items, String order_message, String current_phn_num, String current_Location,String order_time) {
+    public order(String item_name, String no_of_items, String order_message, long current_phn_num, String current_Location,String order_time) {
         this.item_name = item_name;
         this.no_of_items = no_of_items;
         this.order_message = order_message;
         this.Current_phn_num = current_phn_num;
         this.Current_Location = current_Location;
         this.Order_time = Order_time;
+        this.Order_number=Order_number;
     }
 
+    public String getOrder_number() {
+        return Order_number;
+    }
+
+    public void setOrder_number(String order_number) {
+        Order_number = order_number;
+    }
     public String getItem_name() {
         return item_name;
     }
@@ -40,7 +47,7 @@ public class order {
         return order_message;
     }
 
-    public String getCurrent_phn_num() {
+    public long getCurrent_phn_num() {
         return Current_phn_num;
     }
 
@@ -61,7 +68,7 @@ public class order {
         this.order_message = order_message;
     }
 
-    public void setCurrent_phn_num(String current_phn_num) {
+    public void setCurrent_phn_num(long current_phn_num) {
         this.Current_phn_num = current_phn_num;
     }
 

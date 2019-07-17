@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class fooditems extends AppCompatActivity {
-    private String Json_URL = "http://192.168.1.3/foodkart/foodlist.php";
+    private String Json_URL = "http://192.168.1.7/foodkart/foodlist.php";
     private RequestQueue requestQueue;
     private List<foodaneme> lstAnime2;
     private RecyclerView recyclerView;
@@ -36,7 +36,7 @@ public class fooditems extends AppCompatActivity {
 
     }
 
-    private void jsonrequest() {
+    public void jsonrequest() {
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,Json_URL,null,new Response.Listener<JSONObject>(){
 
