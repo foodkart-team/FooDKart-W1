@@ -21,43 +21,39 @@ global $connect;
   	
   	$query1 = "INSERT INTO `order` ( `order_message`, `Current_phn_num`, `Current_Location`,`item_name`,`no_of_items`) VALUES ('".$order_message."','".$Current_phn_num."','".$Current_Location."','".$item_name."','".$no_of_items."')";
     
-    
-
-
+    $q="SELECT * FROM `resfood` where `item_name`='$item_name'";
+	$sql=mysqli_query($connect,$q);
   
+   
    if(empty($item_name) || empty($no_of_items) || empty($order_message) || empty($Current_phn_num) || empty($Current_Location))
    {
-
-   	echo"1";
-
-   }
-	else{
-		$q="SELECT * FROM `resfood` where `item_name`='$item_name'";
-		$sql=mysqli_query($connect,$q);
-       
-        if(mysqli_num_rows($sql)==0)
-        {  	
-			echo"nofood";	
-		} 
-		
-		else{
-				if(!is_numeric($no_of_items) || !is_numeric($Current_phn_num))
-				{
-					echo"notvalidin";
-				}
-				else{
-						$sql1=mysqli_query($connect , $query1);
+	echo"1";
+	}
+	else if(mysqli_num_rows($sql)==0)
+	{
+	echo"2";	
+	} 
+	else if(!ctype_digit($no_of_items)|| $no_of_items > 20)
+	{
+	echo"3";
+	}
+	else if(!preg_match("/^\d{10}+$/",$Current_phn_num))
+	{
+	echo"4";
+	}
+	else{				
+		$sql1=mysqli_query($connect , $query1);
 						if($sql1 )
 						{
-							echo"okay";
+							echo"5";
 						}
-
 						else
 						{
 							echo"servererror";
 						}
-				}
-			}
 		}
 
 }
+		
+
+
