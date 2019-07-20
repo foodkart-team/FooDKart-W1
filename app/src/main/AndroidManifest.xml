@@ -42,7 +42,8 @@
         <activity android:name=".profile"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".logout" />
-        <activity android:name=".aboutus" />
+        <activity android:name=".aboutus"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".restaurantswindow"
             />
         <activity android:name=".foodwindow" />
