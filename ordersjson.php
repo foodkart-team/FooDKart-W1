@@ -8,13 +8,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 	
 	orderjson1();
 	
+	}
 
-}
 function orderjson1(){
 global $connect;
 
 
-	$query2= "SELECT * from `order`";
+	$query2= "SELECT * FROM `order` ORDER BY `order_time` DESC";
+;
      
 	$result2 = mysqli_query($connect,$query2);
     	
